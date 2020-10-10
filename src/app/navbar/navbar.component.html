@@ -1,0 +1,14 @@
+<ul class="navbar">
+  <li class="navbar-link"><a routerLink="/"><span class="navbar-brand">Meu Emprego Novo</span></a></li>
+  <ng-container *ngIf="session.hasSession(); else userSession">
+    <li class="navbar-link navbar-right"><a routerLink="/register"><span class="signin">Cadastrar</span></a></li>
+    <li class="navbar-link navbar-right"><a routerLink="/login">
+      <span class="login">Entrar</span>
+    </a></li>
+  </ng-container>
+  <ng-template #userSession>
+    <li class="navbar-link navbar-right"><a (click)="setSession()" routerLink="/"><span class="leave">Sair</span> </a> </li>
+    <li class="navbar-link navbar-right"><a routerLink="/dashboard">Thiago</a> </li>
+
+  </ng-template>
+</ul>

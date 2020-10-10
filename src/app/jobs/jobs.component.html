@@ -1,0 +1,10 @@
+<div class="grid-container">
+  <ng-container *ngFor="let infos of jobsInfo">
+      <div class="box">
+        <a [routerLink]="['emprego', infos.id]">
+          <p >{{infos.name}}</p>
+          <p>{{infos.business}}</p>
+        </a>
+      </div>
+  </ng-container>
+</div>

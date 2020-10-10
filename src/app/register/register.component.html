@@ -1,0 +1,29 @@
+<div class="Hjkd">
+  <div class="jdkf">
+    <p>Esta pronto para conseguir uma carreira nova?<br>Faça seu cadastro, gratuito!</p>
+  </div>
+  <div class="bHJD">
+    <form [formGroup]="form" (ngSubmit)="submit()">
+      <label>
+        <input class="Jhdl" formControlName="name" type="text" placeholder="Nome completo">
+      </label>
+      <label>
+        <input class="Jhdl" formControlName="birthday" type="text" placeholder="Data de nascimento">
+      </label>
+      <label>
+        <input class="Jhdl" formControlName="cpf" type="text" placeholder="CPF">
+      </label>
+      <label>
+        <input class="Jhdl" formControlName="phone" type="text" placeholder="Celular com DDD">
+      </label>
+      <label>
+        <input class="Jhdl" formControlName="email" type="text" placeholder="Email">
+      </label>
+      <label>
+        <input class="Jhdl" formControlName="password" type="password" placeholder="Senha">
+      </label>
+      <br><br>
+      <input type="submit">
+    </form>
+  </div>
+</div>

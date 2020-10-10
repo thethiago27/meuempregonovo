@@ -1,0 +1,21 @@
+<app-navbar></app-navbar>
+<div class="jobs">
+  <div class="bGvd">
+    <p>São mais de {{jobsInfo.length}} vagas de empregos</p>
+
+    <form [formGroup]="form" (ngSubmit)="search()">
+      <input class="kdjD" placeholder="Cargo" formControlName="job">
+      <input class="kdjD" placeholder="Cidade" formControlName="city">
+      <button class="nhjd">Procurar</button>
+    </form>
+
+  </div>
+</div>
+<div class="hduJ">
+  <div class="Yjjd Ykdl">
+      <button class="kdYs"><i class="fas fa-filter"></i> Filtrar</button>
+      <p class="jdhd">Todas as vagas disponíveis</p>
+      <p></p>
+  </div>
+  <app-jobs></app-jobs>
+</div>
