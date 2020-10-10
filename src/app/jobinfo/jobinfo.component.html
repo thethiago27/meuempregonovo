@@ -1,0 +1,28 @@
+<app-navbar></app-navbar>
+<div class="Kldf">
+  <div class="klOP">
+
+    <ng-container *ngFor="let info of jobInfo">
+
+      <ng-container *ngIf="info.error === true; else elseBlock">
+        <p>Ocorreu um error.</p>
+      </ng-container>
+
+      <ng-template #elseBlock>
+        <div class="klKD">
+          <p>Vaga de emprego em<br>{{info.business}}</p>
+        </div>
+        <div class="klID">
+          <p>Vaga: {{info.name}}</p>
+          <p>Descrição: {{info.desc}}</p>
+          <p>Local: {{info.city}}</p>
+          <p>Salário: {{info.salario}}</p>
+          <p></p>
+
+          <button (click)="submit(info.id)">Candidatar</button>
+
+        </div>
+      </ng-template>
+    </ng-container>
+  </div>
+</div>

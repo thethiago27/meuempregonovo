@@ -1,0 +1,47 @@
+<input type="hidden" #selection>
+<app-navbar></app-navbar>
+<div id="sidebar" class="sidebar">
+  <li class="cydJK active" (click)="selection.value = ''">Perfil</li>
+  <li class="cydJK" (click)="selection.value = 'vagas'">Minhas Vagas</li>
+  <li class="cydJK" (click)="selection.value = 'curriculo'">Curriculo</li>
+  <li class="cydJK" (click)="selection.value = 'myprofile'">Meu Perfil</li>
+  <ng-container *ngIf="user.isPro(); else noPro">
+    <li class="cydJK" (click)="selection.value = 'pro'">PRO</li>
+  </ng-container>
+  <ng-template #noPro>
+    <li class="cydJK" (click)="selection.value = 'pro'">Recomendações</li>
+    <li class="cydJK" (click)="selection.value = 'pro'">Gerencia sua assinatura
+  </ng-template>
+  <li class="cydJK" (click)="selection.value = 'help'">Ajuda</li>
+</div>
+<div class="lkLd">
+  <div class="lkIF">
+    <div class="terminal" [ngSwitch]="selection.value">
+      <div *ngSwitchDefault> <!-- PROFILE SESSION -->
+        <app-profile></app-profile>
+      </div>
+      <div *ngSwitchCase="'vagas'"> <!-- CANDIDATURAS SESSION -->
+        <app-candidaturas></app-candidaturas>
+      </div>
+      <div *ngSwitchCase="'curriculo'"> <!-- CURRICULO SESSION -->
+        <app-curriculo></app-curriculo>
+      </div>
+      <div *ngSwitchCase="'myprofile'"> <!-- MY PROFILE SESSION -->
+        <app-dataprofile></app-dataprofile>
+      </div>
+      <div *ngSwitchCase="'pro'"> <!-- PRO SESSION -->
+        <ng-container *ngIf="user.isPro(); else pro">
+          <p>Seja pro</p>
+        </ng-container>
+        <ng-template #pro>
+          <app-pro></app-pro>
+        </ng-template>
+      </div>
+      <div *ngSwitchCase="'help'"> <!-- HELP SESSION -->
+        <app-helpbook></app-helpbook>
+      </div>
+    </div>
+  </div>
+</div>
+
+

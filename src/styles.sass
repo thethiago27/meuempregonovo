@@ -1,1 +1,306 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'fonts'
+$primary: #0080ff
+$defa_font: 'CircularStd'
+
+html
+  font-family: $defa_font
+
+body
+  padding: 0
+  margin: 0
+  background: #f2f2f2
+
+
+p
+  margin: 0
+
+.navbar
+  list-style: none
+  padding: 0
+  overflow: hidden
+  background: white
+  border-bottom: 2px solid #cccccc
+  border-image-slice: 1
+  margin: 0
+  font-family: 'CircularStd'
+
+  .navbar-brand
+    color: $primary
+    font-weight: bolder
+
+  .navbar-link
+    float: left
+    a
+      display: block
+      color: black
+      text-align: center
+      padding: 20px 15px
+      text-decoration: none
+      font-size: 19px
+      font-weight: 400
+
+      .login
+        border: 2px solid $primary
+        padding: 9px 10px
+        color: white
+        background: $primary
+        border-radius: 5px
+
+      .signin
+        color: grey
+
+      .leave
+        background: red
+        padding: 12px 15px
+        border-radius: 5px
+        color: white
+
+  .navbar-right
+    float: right
+
+.jobs
+  background: linear-gradient(to top right, #0080ff 0%, #33ccff 100%)
+  padding-bottom: 6%
+
+  .bGvd
+    text-align: center
+    color: white
+    font-size: 40px
+    padding-top: 5%
+    font-weight: bolder
+
+  .kdjD
+    background: white
+    border: 0
+    margin-right: 20px
+    padding: 12px 10px
+    width: 20%
+    border-radius: 5px
+
+  .nhjd
+    background: #e6b800
+    padding: 12px 3px
+    width: 15%
+    border: 0
+    border-radius: 5px
+    font-weight: 500
+
+.hduJ
+  padding-left: 100px
+  padding-right: 100px
+
+  .Yjjd
+    display: flex
+    flex-direction: row
+    padding-top: 2%
+
+  .Ykdl
+    justify-content: space-between
+
+    .kdYs
+      background: $primary
+      border: 0
+      color: white
+      font-size: 15px
+      padding: 12px 15px
+      border-radius: 5px
+      font-weight: bolder
+
+    .jdhd
+      font-size: 19px
+
+  .grid-container
+    margin-top: 2%
+    display: grid
+    grid-gap: 25px 25px
+    grid-template-columns: auto auto auto auto
+
+    .box
+      background: white
+      padding: 12px
+      border-radius: 5px
+      box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
+      width: 250px
+      height: 80px
+      max-height: 80px
+      word-break: break-all
+
+      a
+        color: black
+        text-decoration: none
+        font-size: 17px
+
+      a:visited
+        color: $primary
+        font-weight: bolder !important
+        text-decoration: none
+
+    .box:hover
+      margin-top: -3px
+      transition: 0.4ms
+
+
+.Hjkd
+  background: linear-gradient(to top right, #0080ff 0%, #33ccff 100%)
+  padding-bottom: 6%
+
+  .jdkf
+    color: white
+    font-size: 30px
+    font-weight: bolder
+    text-align: center
+    padding-top: 2%
+
+
+  .bHJD
+    width: 40%
+    background: white
+    padding: 12px
+    border-radius: 5px
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
+    margin-right: auto
+    margin-left: auto
+    margin-top: 5%
+    text-align: center
+
+  .Jhdl
+    width: 80%
+    background: #f2f2f2
+    border-radius: 5px
+    padding: 12px 15px
+    margin-top: 20px
+    border: 0
+    font-size: 16px
+
+  .jdhkd
+    background: $primary
+    padding: 12px
+    border-radius: 5px
+    font-size: 16px
+    border: 0
+    color: white
+
+.Kldf
+  background: linear-gradient(to top right, #0080ff 0%, #33ccff 100%)
+  height: 29%
+  position: fixed
+  width: 100%
+
+  .klOP
+    margin-left: 180px
+    margin-right: 180px
+
+  .klKD
+    color: white
+    font-size: 30px
+    font-weight: bolder
+    text-align: left
+    padding-top: 2%
+    margin-top: 2%
+
+  .klID
+    background: white
+    padding: 12px
+    border-radius: 5px
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.2)
+    width: 50%
+    margin-top: 5%
+    line-height: 35px
+
+/* DASHBOARD SETTINGS
+.lkLd
+  padding-left: 100px
+  padding-right: 100px
+  margin-top: 2%
+
+  .lkIF
+    display: flex
+    justify-content: space-between
+
+.sidebar
+  background: #0080ff
+  padding-top: 0px
+  padding-bottom: 62px
+
+  li
+    padding: 20px
+    list-style-type: none
+    color: white
+    font-size: 18px
+    font-weight: bolder
+    float: left
+    display: block
+
+
+  li:hover
+    background: #16b6e8
+
+  .active
+    background: #16b6e8
+
+.kldr
+  width: 92%
+  justify-content: center
+  position: fixed
+  z-index: 1
+
+  .Lkdld
+    counter-reset: step
+
+    li
+      float: left
+      width: 20%
+      position: relative
+      text-align: center
+      list-style-type: none
+      color: $primary
+
+    li:before
+      content: counter(step)
+      counter-increment: step
+      width: 30px
+      height: 30px
+      border: 2px solid $primary
+      display: block
+      margin: 0 auto 10px auto
+      border-radius: 50%
+      line-height: 27px
+      background: white
+      color: $primary
+      text-align: center
+      font-weight: bolder
+
+    li:after
+      content: ''
+      position: absolute
+      width: 100%
+      height: 3px
+      background: $primary
+      top: 15px
+      left: -50%
+      z-index: -1
+
+    li:first-child:after
+      content: none
+
+    .kflde
+      background: $primary
+      color: white
+
+.Hjdpe
+  padding-top: 10%
+  form
+    input
+      border: 2px solid $primary
+      margin-right: 5px
+      width: 20%
+      color: $primary
+      padding: 12px 15px
+      margin-top: 25px
+      font-size: 16px
+      font-weight: 500
+      background: transparent
+      border-radius: 5px
+
+
+
